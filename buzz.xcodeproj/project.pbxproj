@@ -1,0 +1,927 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"buzz::buzzPackageTests::ProductTarget" /* buzzPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_101 /* Build configuration list for PBXAggregateTarget "buzzPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_104 /* PBXTargetDependency */,
+			);
+			name = buzzPackageTests;
+			productName = buzzPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		OBJ_37 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_43 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Package.swift */; };
+		OBJ_49 /* BuzzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* BuzzTests.swift */; };
+		OBJ_51 /* buzzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "buzz::buzzCore::Product" /* buzzCore.framework */; };
+		OBJ_52 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Files::Files::Product" /* Files.framework */; };
+		OBJ_53 /* CommandLineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "buzz::CommandLineKit::Product" /* CommandLineKit.framework */; };
+		OBJ_65 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* main.swift */; };
+		OBJ_67 /* buzzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "buzz::buzzCore::Product" /* buzzCore.framework */; };
+		OBJ_68 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Files::Files::Product" /* Files.framework */; };
+		OBJ_69 /* CommandLineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "buzz::CommandLineKit::Product" /* CommandLineKit.framework */; };
+		OBJ_77 /* Buzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Buzz.swift */; };
+		OBJ_78 /* DownloadSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* DownloadSessionManager.swift */; };
+		OBJ_79 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Extensions.swift */; };
+		OBJ_80 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Reachability.swift */; };
+		OBJ_82 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Files::Files::Product" /* Files.framework */; };
+		OBJ_83 /* CommandLineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "buzz::CommandLineKit::Product" /* CommandLineKit.framework */; };
+		OBJ_90 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Files.swift */; };
+		OBJ_96 /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* CommandLine.swift */; };
+		OBJ_97 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Option.swift */; };
+		OBJ_98 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* StringExtensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D84626EC206279E700A9EE2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "buzz::buzzCore";
+			remoteInfo = buzzCore;
+		};
+		D84626ED206279E700A9EE2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Files::Files";
+			remoteInfo = Files;
+		};
+		D84626EE206279E700A9EE2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "buzz::CommandLineKit";
+			remoteInfo = CommandLineKit;
+		};
+		D84626EF206279E700A9EE2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Files::Files";
+			remoteInfo = Files;
+		};
+		D84626F0206279E700A9EE2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "buzz::CommandLineKit";
+			remoteInfo = CommandLineKit;
+		};
+		D84626F1206279E700A9EE2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "buzz::buzzCore";
+			remoteInfo = buzzCore;
+		};
+		D84626F2206279E700A9EE2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Files::Files";
+			remoteInfo = Files;
+		};
+		D84626F3206279E700A9EE2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "buzz::CommandLineKit";
+			remoteInfo = CommandLineKit;
+		};
+		D84626F4206279E800A9EE2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "buzz::buzzTests";
+			remoteInfo = buzzTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		"Files::Files::Product" /* Files.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Files.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		OBJ_11 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		OBJ_13 /* Buzz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buzz.swift; sourceTree = "<group>"; };
+		OBJ_14 /* DownloadSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadSessionManager.swift; sourceTree = "<group>"; };
+		OBJ_15 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		OBJ_16 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		OBJ_18 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		OBJ_21 /* BuzzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuzzTests.swift; sourceTree = "<group>"; };
+		OBJ_24 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/nathan/Desktop/MyProgram/buzz/.build/checkouts/files.git-38808351534159693/Package.swift"; sourceTree = "<group>"; };
+		OBJ_25 /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* CommandLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLine.swift; sourceTree = "<group>"; };
+		"buzz::CommandLineKit::Product" /* CommandLineKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommandLineKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"buzz::buzz::Product" /* buzz */ = {isa = PBXFileReference; lastKnownFileType = text; path = buzz; sourceTree = BUILT_PRODUCTS_DIR; };
+		"buzz::buzzCore::Product" /* buzzCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = buzzCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"buzz::buzzTests::Product" /* buzzTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = buzzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_51 /* buzzCore.framework in Frameworks */,
+				OBJ_52 /* Files.framework in Frameworks */,
+				OBJ_53 /* CommandLineKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_67 /* buzzCore.framework in Frameworks */,
+				OBJ_68 /* Files.framework in Frameworks */,
+				OBJ_69 /* CommandLineKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_82 /* Files.framework in Frameworks */,
+				OBJ_83 /* CommandLineKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_12 /* buzzCore */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_13 /* Buzz.swift */,
+				OBJ_14 /* DownloadSessionManager.swift */,
+				OBJ_15 /* Extensions.swift */,
+				OBJ_16 /* Reachability.swift */,
+			);
+			name = buzzCore;
+			path = Sources/buzzCore;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_17 /* buzz */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_18 /* main.swift */,
+			);
+			name = buzz;
+			path = Sources/buzz;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_19 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_20 /* buzzTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_20 /* buzzTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_21 /* BuzzTests.swift */,
+			);
+			name = buzzTests;
+			path = Tests/buzzTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_22 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_23 /* Files 1.12.0 */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_23 /* Files 1.12.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_24 /* Package.swift */,
+				OBJ_25 /* Files.swift */,
+			);
+			name = "Files 1.12.0";
+			path = ".build/checkouts/files.git-38808351534159693/Sources";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"buzz::buzzTests::Product" /* buzzTests.xctest */,
+				"buzz::buzz::Product" /* buzz */,
+				"buzz::buzzCore::Product" /* buzzCore.framework */,
+				"Files::Files::Product" /* Files.framework */,
+				"buzz::CommandLineKit::Product" /* CommandLineKit.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_19 /* Tests */,
+				OBJ_22 /* Dependencies */,
+				OBJ_26 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* CommandLineKit */,
+				OBJ_12 /* buzzCore */,
+				OBJ_17 /* buzz */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* CommandLineKit */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* CommandLine.swift */,
+				OBJ_10 /* Option.swift */,
+				OBJ_11 /* StringExtensions.swift */,
+			);
+			name = CommandLineKit;
+			path = Sources/CommandLineKit;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"Files::Files" /* Files */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_86 /* Build configuration list for PBXNativeTarget "Files" */;
+			buildPhases = (
+				OBJ_89 /* Sources */,
+				OBJ_91 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Files;
+			productName = Files;
+			productReference = "Files::Files::Product" /* Files.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Files::SwiftPMPackageDescription" /* FilesPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_39 /* Build configuration list for PBXNativeTarget "FilesPackageDescription" */;
+			buildPhases = (
+				OBJ_42 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FilesPackageDescription;
+			productName = FilesPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"buzz::CommandLineKit" /* CommandLineKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_92 /* Build configuration list for PBXNativeTarget "CommandLineKit" */;
+			buildPhases = (
+				OBJ_95 /* Sources */,
+				OBJ_99 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CommandLineKit;
+			productName = CommandLineKit;
+			productReference = "buzz::CommandLineKit::Product" /* CommandLineKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"buzz::SwiftPMPackageDescription" /* buzzPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_33 /* Build configuration list for PBXNativeTarget "buzzPackageDescription" */;
+			buildPhases = (
+				OBJ_36 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = buzzPackageDescription;
+			productName = buzzPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"buzz::buzz" /* buzz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_61 /* Build configuration list for PBXNativeTarget "buzz" */;
+			buildPhases = (
+				OBJ_64 /* Sources */,
+				OBJ_66 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_70 /* PBXTargetDependency */,
+				OBJ_71 /* PBXTargetDependency */,
+				OBJ_72 /* PBXTargetDependency */,
+			);
+			name = buzz;
+			productName = buzz;
+			productReference = "buzz::buzz::Product" /* buzz */;
+			productType = "com.apple.product-type.tool";
+		};
+		"buzz::buzzCore" /* buzzCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_73 /* Build configuration list for PBXNativeTarget "buzzCore" */;
+			buildPhases = (
+				OBJ_76 /* Sources */,
+				OBJ_81 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_84 /* PBXTargetDependency */,
+				OBJ_85 /* PBXTargetDependency */,
+			);
+			name = buzzCore;
+			productName = buzzCore;
+			productReference = "buzz::buzzCore::Product" /* buzzCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"buzz::buzzTests" /* buzzTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_45 /* Build configuration list for PBXNativeTarget "buzzTests" */;
+			buildPhases = (
+				OBJ_48 /* Sources */,
+				OBJ_50 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_54 /* PBXTargetDependency */,
+				OBJ_56 /* PBXTargetDependency */,
+				OBJ_58 /* PBXTargetDependency */,
+			);
+			name = buzzTests;
+			productName = buzzTests;
+			productReference = "buzz::buzzTests::Product" /* buzzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "buzz" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"buzz::SwiftPMPackageDescription" /* buzzPackageDescription */,
+				"Files::SwiftPMPackageDescription" /* FilesPackageDescription */,
+				"buzz::buzzTests" /* buzzTests */,
+				"buzz::buzz" /* buzz */,
+				"buzz::buzzCore" /* buzzCore */,
+				"Files::Files" /* Files */,
+				"buzz::CommandLineKit" /* CommandLineKit */,
+				"buzz::buzzPackageTests::ProductTarget" /* buzzPackageTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_37 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_43 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_49 /* BuzzTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_65 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_77 /* Buzz.swift in Sources */,
+				OBJ_78 /* DownloadSessionManager.swift in Sources */,
+				OBJ_79 /* Extensions.swift in Sources */,
+				OBJ_80 /* Reachability.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_90 /* Files.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_96 /* CommandLine.swift in Sources */,
+				OBJ_97 /* Option.swift in Sources */,
+				OBJ_98 /* StringExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_104 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "buzz::buzzTests" /* buzzTests */;
+			targetProxy = D84626F4206279E800A9EE2D /* PBXContainerItemProxy */;
+		};
+		OBJ_54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "buzz::buzzCore" /* buzzCore */;
+			targetProxy = D84626F1206279E700A9EE2D /* PBXContainerItemProxy */;
+		};
+		OBJ_56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Files::Files" /* Files */;
+			targetProxy = D84626F2206279E700A9EE2D /* PBXContainerItemProxy */;
+		};
+		OBJ_58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "buzz::CommandLineKit" /* CommandLineKit */;
+			targetProxy = D84626F3206279E700A9EE2D /* PBXContainerItemProxy */;
+		};
+		OBJ_70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "buzz::buzzCore" /* buzzCore */;
+			targetProxy = D84626EC206279E700A9EE2D /* PBXContainerItemProxy */;
+		};
+		OBJ_71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Files::Files" /* Files */;
+			targetProxy = D84626EF206279E700A9EE2D /* PBXContainerItemProxy */;
+		};
+		OBJ_72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "buzz::CommandLineKit" /* CommandLineKit */;
+			targetProxy = D84626F0206279E700A9EE2D /* PBXContainerItemProxy */;
+		};
+		OBJ_84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Files::Files" /* Files */;
+			targetProxy = D84626ED206279E700A9EE2D /* PBXContainerItemProxy */;
+		};
+		OBJ_85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "buzz::CommandLineKit" /* CommandLineKit */;
+			targetProxy = D84626EE206279E700A9EE2D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_103 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 3 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		OBJ_41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 3 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		OBJ_46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = buzz.xcodeproj/buzzTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = buzzTests;
+			};
+			name = Debug;
+		};
+		OBJ_47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = buzz.xcodeproj/buzzTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = buzzTests;
+			};
+			name = Release;
+		};
+		OBJ_62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = buzz.xcodeproj/buzz_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = buzz;
+			};
+			name = Debug;
+		};
+		OBJ_63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = buzz.xcodeproj/buzz_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = buzz;
+			};
+			name = Release;
+		};
+		OBJ_74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = buzz.xcodeproj/buzzCore_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = buzzCore;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = buzzCore;
+			};
+			name = Debug;
+		};
+		OBJ_75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = buzz.xcodeproj/buzzCore_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = buzzCore;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = buzzCore;
+			};
+			name = Release;
+		};
+		OBJ_87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = buzz.xcodeproj/Files_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Files;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGET_NAME = Files;
+			};
+			name = Debug;
+		};
+		OBJ_88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = buzz.xcodeproj/Files_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Files;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGET_NAME = Files;
+			};
+			name = Release;
+		};
+		OBJ_93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = buzz.xcodeproj/CommandLineKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CommandLineKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = CommandLineKit;
+			};
+			name = Debug;
+		};
+		OBJ_94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = buzz.xcodeproj/CommandLineKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CommandLineKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = CommandLineKit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_101 /* Build configuration list for PBXAggregateTarget "buzzPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_102 /* Debug */,
+				OBJ_103 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "buzz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_33 /* Build configuration list for PBXNativeTarget "buzzPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_34 /* Debug */,
+				OBJ_35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_39 /* Build configuration list for PBXNativeTarget "FilesPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_40 /* Debug */,
+				OBJ_41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_45 /* Build configuration list for PBXNativeTarget "buzzTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_46 /* Debug */,
+				OBJ_47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_61 /* Build configuration list for PBXNativeTarget "buzz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_62 /* Debug */,
+				OBJ_63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_73 /* Build configuration list for PBXNativeTarget "buzzCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_74 /* Debug */,
+				OBJ_75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_86 /* Build configuration list for PBXNativeTarget "Files" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_87 /* Debug */,
+				OBJ_88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_92 /* Build configuration list for PBXNativeTarget "CommandLineKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_93 /* Debug */,
+				OBJ_94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}

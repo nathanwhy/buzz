@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Files",
+        "repositoryURL": "https://github.com/johnsundell/files.git",
+        "state": {
+          "branch": null,
+          "revision": "c2b337cd9cbe91622830e7e0f8ca76845ba81ca6",
+          "version": "1.12.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
