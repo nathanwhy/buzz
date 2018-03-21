@@ -103,10 +103,10 @@ class DownloadSessionManager : NSObject, URLSessionDataDelegate {
         for i in 0...barWidth {
             switch(i) {
             case _ where i < pos:
-                print("🁢", terminator:"")
+                print("=", terminator:"")
                 break
             case pos:
-                print("🁢", terminator:"")
+                print("=", terminator:"")
                 break
             default:
                 print(" ", terminator:"")
@@ -186,7 +186,7 @@ class DownloadSessionManager : NSObject, URLSessionDataDelegate {
         
         let cost = time - lastTime
         
-        if cost <= 0.8 {
+        if cost <= 0.8 && _progress < 100 {
             return
         }
         if dataCount > lastData {
@@ -196,7 +196,7 @@ class DownloadSessionManager : NSObject, URLSessionDataDelegate {
         progress.setUserInfoObject(dataCount, forKey: .fileCompletedCountKey)
         progress.setUserInfoObject(time, forKey: .estimatedTimeRemainingKey)
         
-        show(progress: _progress, barWidth: 70, speedInK: kbs)
+        show(progress: _progress, barWidth: 50, speedInK: kbs)
     }
     
     func urlSession(_: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
