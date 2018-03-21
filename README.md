@@ -1,5 +1,7 @@
 # buzz
 
+[![Build Status](https://travis-ci.org/nathanwhy/buzz.svg?branch=master)](https://travis-ci.org/nathanwhy/buzz)
+
 Command-line program to download files
 
 - [x] resume a download
