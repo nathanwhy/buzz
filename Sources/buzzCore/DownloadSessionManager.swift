@@ -100,6 +100,20 @@ class DownloadSessionManager : NSObject, URLSessionDataDelegate {
         } else {
             print("] \(progress)% \(speedInK)KB/s", terminator:"")
         }
+        
+        if progress >= 100, let startrdAt = taskStartedAt {
+            let diff = Date().timeIntervalSince(startrdAt)
+            if diff > 0 {
+                switch diff {
+                case 0..<60: print(" in \(String(format: "%.1fs", diff))", terminator:"")
+                case 60..<3600: print(" in \(Int(diff) / 60)min\(Int(diff) % 60)s", terminator:"")
+                case 3600..<86400: print(" in \(Int(diff) / 3600)h\(Int(diff) / 60)min\(Int(diff) % 60)s", terminator:"")
+                default:
+                    print(" in \(Int(diff) / 86400)day\(Int(diff) / 3600)h", terminator:"")
+                }
+            }
+        }
+        
         fflush(__stdoutp)
     }
     
