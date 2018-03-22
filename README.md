@@ -7,6 +7,10 @@ Command-line program to download files
 
 - [x] resume a download
 - [x] cookie support
+- [x] customize header
+- [ ] recursive download
+- [ ] output file
+- [ ] FTP support
 - [ ] Proxy
 
 
@@ -43,7 +47,12 @@ Running buzz with the same arguments, the download progress will resume from the
 ### Cookies
 
 ```
-buzz --header "Cookie: value; otherName: value2" http://adcdownload.apple.com/Developer_Tools/Xcode_8.1_beta_2/Xcode_8.1_beta_2.xip
+buzz --header "Cookie: value; otherName: value2" http://something.zip
+```
+
+For example,
+```
+buzz --header "Cookie: ADCDownloadAuth=xxxxxx" http://adcdownload.apple.com/Developer_Tools/Xcode_8.1_beta_2/Xcode_8.1_beta_2.xip
 ```
 
 
