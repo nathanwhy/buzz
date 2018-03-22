@@ -32,6 +32,7 @@ class DownloadSessionManager : NSObject, URLSessionDataDelegate {
     var filePath : String?
     var url: URL?
     var progress: Progress = Progress()
+    var header: [String: String]?
     
     let semaphore = DispatchSemaphore.init(value: 0)
     var session : URLSession!
@@ -46,27 +47,10 @@ class DownloadSessionManager : NSObject, URLSessionDataDelegate {
         self.session = URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
     }
     
-    func downloadFile(fromURL url: URL, toPath path: String) {
-        self.filePath = path
-        self.url = url
-        
-        if FileManager().fileExists(atPath: path) {
-            if let fileInfo = try? FileManager().attributesOfItem(atPath: path), let length = fileInfo[.size] as? Int64 {
-                progress.completedUnitCount = length
-            }
-        }
-        var request = URLRequest(url: url)
-        request.setValue("bytes=\(progress.completedUnitCount)-", forHTTPHeaderField: "Range")
-        
-        taskStartedAt = Date()
-        let task = session.dataTask(with: request)
-        task.resume()
-        semaphore.wait()
-    }
-    
     func downloadFile(fromURL url: URL, toPath path: String, header: [String: String]?) {
         self.filePath = path
         self.url = url
+        self.header = header
         
         if FileManager().fileExists(atPath: path) {
             if let fileInfo = try? FileManager().attributesOfItem(atPath: path), let length = fileInfo[.size] as? Int64 {
@@ -91,10 +75,8 @@ class DownloadSessionManager : NSObject, URLSessionDataDelegate {
     }
     
     func resumeDownload() {
-        
         self.resetSession()
-        
-        self.downloadFile(fromURL: self.url!, toPath: self.filePath!)
+        self.downloadFile(fromURL: self.url!, toPath: self.filePath!, header: self.header)
     }
     
     func show(progress: Int, barWidth: Int, speedInK: Int) {
