@@ -79,41 +79,57 @@ class DownloadSessionManager : NSObject, URLSessionDataDelegate {
         self.downloadFile(fromURL: self.url!, toPath: self.filePath!, header: self.header)
     }
     
-    func show(progress: Int, barWidth: Int, speedInK: Int) {
+    func showDownloadInfo() {
+        let barWidth = 50
+        var bytesPerSecond = 0.0
+        let downloadProgress = Int(self.progress.fractionCompleted * 100.0)
+        
+        let dataCount = progress.completedUnitCount
+        var lastData: Int64 = 0
+        if let temp = progress.userInfo[.fileCompletedCountKey] as? Int64 {
+            lastData = temp
+        }
+        
+        let time = Date().timeIntervalSince1970
+        var lastTime: Double = 0
+        if let temp = progress.userInfo[.estimatedTimeRemainingKey] as? Double {
+            lastTime = temp
+        }
+        
+        let cost = time - lastTime
+        
+        if cost <= 0.8 && downloadProgress < 100 {
+            return
+        }
+        if dataCount > lastData {
+            bytesPerSecond = Double(dataCount - lastData) / cost
+        }
+        
+        progress.setUserInfoObject(dataCount, forKey: .fileCompletedCountKey)
+        progress.setUserInfoObject(time, forKey: .estimatedTimeRemainingKey)
+        
         print("\r[", terminator: "")
-        let pos = Int(Double(barWidth*progress)/100.0)
+        let pos = Int(Double(barWidth * downloadProgress) / 100.0)
         for i in 0...barWidth {
             switch(i) {
             case _ where i < pos:
                 print("=", terminator:"")
                 break
             case pos:
-                print("=", terminator:"")
+                print(">", terminator:"")
                 break
             default:
                 print(" ", terminator:"")
                 break
             }
         }
-        if speedInK > 1024 {
-            print("] \(progress)% \(String(format: "%.2f", Double(speedInK) / 1024.0))MB/s", terminator:"")
-        } else {
-            print("] \(progress)% \(speedInK)KB/s", terminator:"")
-        }
         
-        if progress >= 100, let startrdAt = taskStartedAt {
+        print("] \(downloadProgress)% \(bytesPerSecond.convertSpeedToString())", terminator:"")
+        
+        if downloadProgress >= 100, let startrdAt = taskStartedAt {
             let diff = Date().timeIntervalSince(startrdAt)
-            if diff > 0 {
-                switch diff {
-                case 0..<60: print(" in \(String(format: "%.1fs", diff))", terminator:"")
-                case 60..<3600: print(" in \(Int(diff) / 60)min\(Int(diff) % 60)s", terminator:"")
-                case 3600..<86400: print(" in \(Int(diff) / 3600)h\(Int(diff) / 60)min\(Int(diff) % 60)s", terminator:"")
-                default:
-                    print(" in \(Int(diff) / 86400)day\(Int(diff) / 3600)h", terminator:"")
-                }
-            }
+            print(" in \(diff.convertTimeToString())", terminator:"")
         }
-        
         fflush(__stdoutp)
     }
     
@@ -164,38 +180,13 @@ class DownloadSessionManager : NSObject, URLSessionDataDelegate {
         let dataLength = Int64((data as NSData).length)
         progress.completedUnitCount += dataLength
         _ = data.withUnsafeBytes { outputStream?.write($0, maxLength: data.count) }
-        
-        let _progress = Int(self.progress.fractionCompleted * 100.0)
-        var kbs = 0
-        
-        let dataCount = progress.completedUnitCount
-        var lastData: Int64 = 0
-        if let temp = progress.userInfo[.fileCompletedCountKey] as? Int64 {
-            lastData = temp
-        }
-        
-        let time = Date().timeIntervalSince1970
-        var lastTime: Double = 0
-        if let temp = progress.userInfo[.estimatedTimeRemainingKey] as? Double {
-            lastTime = temp
-        }
-        
-        let cost = time - lastTime
-        
-        if cost <= 0.8 && _progress < 100 {
-            return
-        }
-        if dataCount > lastData {
-            kbs = Int(Double(dataCount - lastData) / 1024 / cost)
-        }
-        
-        progress.setUserInfoObject(dataCount, forKey: .fileCompletedCountKey)
-        progress.setUserInfoObject(time, forKey: .estimatedTimeRemainingKey)
-        
-        show(progress: _progress, barWidth: 50, speedInK: kbs)
+        showDownloadInfo()
     }
     
     func urlSession(_: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        
+        print("")
+        print("download complete")
         
         outputStream?.close()
         outputStream = nil
@@ -220,7 +211,6 @@ class DownloadSessionManager : NSObject, URLSessionDataDelegate {
             }
         }
         
-        print("")
         print("Ooops! Something went wrong: \(error.localizedDescription)")
     }
 }
