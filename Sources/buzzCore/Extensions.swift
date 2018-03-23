@@ -24,10 +24,9 @@ extension String {
     }
     
     public func isValidURLString() -> Bool {
-        // to do ...
+
         let predicateStr = "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
         let predicate =  NSPredicate(format: "SELF MATCHES %@" ,predicateStr)
         return predicate.evaluate(with: self)
-//        return self.contains("http://") || self.contains("https://")
     }
 }

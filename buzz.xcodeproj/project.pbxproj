@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		96F7E903206486F4008DB91E /* CommandLineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F7E902206486F4008DB91E /* CommandLineTests.swift */; };
 		OBJ_37 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_43 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Package.swift */; };
 		OBJ_49 /* BuzzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* BuzzTests.swift */; };
@@ -110,6 +111,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		96F7E902206486F4008DB91E /* CommandLineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CommandLineTests.swift; path = Tests/BuzzTests/CommandLineTests.swift; sourceTree = SOURCE_ROOT; };
 		"Files::Files::Product" /* Files.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Files.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		OBJ_11 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_21 /* BuzzTests.swift */,
+				96F7E902206486F4008DB91E /* CommandLineTests.swift */,
 			);
 			name = buzzTests;
 			path = Tests/buzzTests;
@@ -449,6 +452,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_49 /* BuzzTests.swift in Sources */,
+				96F7E903206486F4008DB91E /* CommandLineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

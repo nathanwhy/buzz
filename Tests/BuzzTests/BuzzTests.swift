@@ -44,4 +44,8 @@ class BuzzTests: XCTestCase {
         XCTAssertTrue("http://google.com".isValidURLString())
         XCTAssertTrue("https://google.com".isValidURLString())
     }
+    
+    func testNetworkEnable() throws {
+        XCTAssertTrue(Reachability.isConnectedToNetwork())
+    }
 }
