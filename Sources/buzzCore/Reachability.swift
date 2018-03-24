@@ -9,8 +9,8 @@ import Foundation
 import Cocoa
 import SystemConfiguration
 
-class Reachability {
-    class func isConnectedToNetwork() -> Bool {
+public class Reachability {
+    public class func isConnectedToNetwork() -> Bool {
         guard let flags = getFlags() else { return false }
         let isReachable = flags.contains(.reachable)
         let needsConnection = flags.contains(.connectionRequired)
