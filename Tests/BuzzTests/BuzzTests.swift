@@ -9,7 +9,7 @@ let imgUrl = "http://fdfs.xmcdn.com/group21/M0B/AF/1B/wKgJLVivxqOiF8OsAAFUzt0qmg
 let failedUrl = "https://httpbin.org/status/404"
 
 class BuzzTests: XCTestCase {
-    func testCreatingFile() throws {
+    func testDownloadFileSuccess() throws {
         
         let fileSystem = FileSystem()
         let tempFolder = fileSystem.temporaryFolder
@@ -25,6 +25,25 @@ class BuzzTests: XCTestCase {
         try tool.run()
         
         XCTAssertNotNil(try? testFolder.file(named: "wKgJLVivxqOiF8OsAAFUzt0qmg4260_mobile_large.jpg"))
+        
+        try testFolder.empty()
+    }
+    
+    func testRequestFailed() throws {
+        
+        let fileSystem = FileSystem()
+        let tempFolder = fileSystem.temporaryFolder
+        let testFolder = try tempFolder.createSubfolderIfNeeded(
+            withName: "CommandLineToolTests"
+        )
+        try testFolder.empty()
+        let fileManager = FileManager.default
+        fileManager.changeCurrentDirectoryPath(testFolder.path)
+        
+        let arguments = [testFolder.path, failedUrl]
+        let tool = Buzz(arguments: arguments)
+        try tool.run()
+        XCTAssertTrue(testFolder.files.count == 0)
     }
     
     func testHeaderStringValue() throws {
@@ -50,7 +69,7 @@ class BuzzTests: XCTestCase {
     func testConvertTimeToString() throws {
         
         let testArray = [-1.0, 6, 66, 6666, 86921]
-        let expections = ["", "6s", "1m 6s", "1h 51m 6s", "1d 0h 8m 41s"]
+        let expections = ["", "6.0s", "1m 6s", "1h 51m 6s", "1d 0h 8m 41s"]
         
         for i in 0..<testArray.count {
             XCTAssertTrue(expections[i] == testArray[i].convertTimeToString())

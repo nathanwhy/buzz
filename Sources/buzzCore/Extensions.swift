@@ -36,6 +36,9 @@ extension Double {
     
     public func convertTimeToString() -> String {
         if self <= 0 { return "" }
+        if self < 60 {
+            return "\(String(format: "%.1f", self))s"
+        }
         var timeString = ""
         if self >= 86400 {
             timeString += "\(Int(self) / 86400)d "

@@ -154,20 +154,19 @@ class DownloadSessionManager : NSObject, URLSessionDataDelegate {
             }
         }
         
-        if progress.completedUnitCount == progress.totalUnitCount && 0 != progress.totalUnitCount {
+        if progress.completedUnitCount >= progress.totalUnitCount && 0 != progress.totalUnitCount {
             print("already exists, nothing to do!")
             completionHandler(.cancel)
             return
         }
         
-        if progress.completedUnitCount > progress.totalUnitCount {
-            print("file size error!")
-            try! FileManager.default.removeItem(at: URL.init(fileURLWithPath: self.filePath!))
+        if response.statusCode >= 300 || response.statusCode < 200 {
+            let statusCodeStr = HTTPURLResponse.localizedString(forStatusCode: response.statusCode)
+            print("ERROR \(response.statusCode): " + statusCodeStr)
             completionHandler(.cancel)
-            progress.completedUnitCount = 0
-            resumeDownload();
             return
         }
+        
         outputStream = OutputStream(toFileAtPath: self.filePath!, append: true)
         outputStream?.open()
         completionHandler(.allow)
@@ -186,7 +185,6 @@ class DownloadSessionManager : NSObject, URLSessionDataDelegate {
     func urlSession(_: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
         
         print("")
-        print("download complete")
         
         outputStream?.close()
         outputStream = nil
@@ -195,6 +193,7 @@ class DownloadSessionManager : NSObject, URLSessionDataDelegate {
             defer {
                 semaphore.signal()
             }
+            print("download complete")
             return
         }
         
