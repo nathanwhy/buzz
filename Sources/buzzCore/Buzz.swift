@@ -10,7 +10,7 @@ import Cocoa
 import Files
 import CommandLineKit
 
-let appVersion = "0.1.0"
+let appVersion = "0.1.1"
 
 public final class Buzz {
     private let arguments: [String]
