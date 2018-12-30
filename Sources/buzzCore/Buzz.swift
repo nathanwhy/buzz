@@ -14,15 +14,13 @@ let appVersion = "0.1.1"
 
 public final class Buzz {
     private let arguments: [String]
-    
+
     public init(arguments: [String] = CommandLine.arguments) {
         self.arguments = arguments
     }
-    
+
     public func run() throws {
-        
         let cli = CommandLineKit.CommandLine(arguments: self.arguments)
-        
         
         let headerOption = StringOption(longFlag: "header", helpMessage: "insert string among the headers")
         cli.addOption(headerOption)

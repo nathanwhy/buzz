@@ -27,7 +27,6 @@ struct Network {
 }
 
 class DownloadSessionManager : NSObject, URLSessionDataDelegate {
-    
     static let sharedInstance = DownloadSessionManager()
     var filePath : String?
     var url: URL?
@@ -37,16 +36,16 @@ class DownloadSessionManager : NSObject, URLSessionDataDelegate {
     let semaphore = DispatchSemaphore.init(value: 0)
     var session : URLSession!
     var outputStream: OutputStream?
-    
+
     override init() {
         super.init()
         self.resetSession()
     }
-    
+
     func resetSession() {
         self.session = URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
     }
-    
+
     func downloadFile(fromURL url: URL, toPath path: String, header: [String: String]?) {
         self.filePath = path
         self.url = url
@@ -73,12 +72,12 @@ class DownloadSessionManager : NSObject, URLSessionDataDelegate {
         task.resume()
         semaphore.wait()
     }
-    
+
     func resumeDownload() {
         self.resetSession()
         self.downloadFile(fromURL: self.url!, toPath: self.filePath!, header: self.header)
     }
-    
+
     func showDownloadInfo() {
         let barWidth = 50
         var bytesPerSecond = 0.0
@@ -172,20 +171,17 @@ class DownloadSessionManager : NSObject, URLSessionDataDelegate {
         completionHandler(.allow)
         print("start to download ..")
     }
-    
+
     var taskStartedAt : Date?
-    
+
     func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
         let dataLength = Int64((data as NSData).length)
         progress.completedUnitCount += dataLength
         _ = data.withUnsafeBytes { outputStream?.write($0, maxLength: data.count) }
         showDownloadInfo()
     }
-    
+
     func urlSession(_: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
-        
-        print("")
-        
         outputStream?.close()
         outputStream = nil
         

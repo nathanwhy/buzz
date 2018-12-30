@@ -8,9 +8,7 @@
 import Foundation
 
 extension String {
-    
     public func queryDictionary() -> [String: String]? {
-        
         var queryDic: [String: String] = [:]
         let pairs = self.components(separatedBy: ";")
         
@@ -22,9 +20,8 @@ extension String {
         }
         return queryDic
     }
-    
-    public func isValidURLString() -> Bool {
 
+    public func isValidURLString() -> Bool {
         let predicateStr = "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
         let predicate =  NSPredicate(format: "SELF MATCHES %@" ,predicateStr)
         return predicate.evaluate(with: self)
@@ -33,7 +30,6 @@ extension String {
 
 
 extension Double {
-    
     public func convertTimeToString() -> String {
         if self <= 0 { return "" }
         if self < 60 {
@@ -52,7 +48,7 @@ extension Double {
         timeString += "\(Int(self) % 60)s"
         return timeString
     }
-    
+
     public func convertSpeedToString() -> String {
         if self <= 0 { return "" }
         if self >= pow(1024, 3) {
@@ -65,7 +61,7 @@ extension Double {
             return "\(Int(self))B/s"
         }
     }
-    
+
     public func convertBytesToString() -> String {
         switch self {
         case _ where self >= pow(1024, 3):
