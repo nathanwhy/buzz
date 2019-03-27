@@ -65,3 +65,7 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+buzz.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+buzz.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+buzz.xcodeproj/xcshareddata/xcschemes/buzz-Package.xcscheme
+buzz.xcodeproj/xcshareddata/xcschemes

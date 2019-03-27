@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "buzz",
     dependencies: [
-        .package(url: "https://github.com/johnsundell/files.git", from: "2.2.1")
+        .package(url: "https://github.com/johnsundell/files.git", from: "3.0.0")
     ],
     targets: [
         .target(name: "buzz", dependencies: ["buzzCore"]),

@@ -15,7 +15,7 @@ let appVersion = "0.1.1"
 public final class Buzz {
     private let arguments: [String]
 
-    public init(arguments: [String] = CommandLine.arguments) {
+    public init(arguments: [String] = Swift.CommandLine.arguments) {
         self.arguments = arguments
     }
 
