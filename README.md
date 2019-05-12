@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/nathanwhy/buzz.svg?branch=master)](https://travis-ci.org/nathanwhy/buzz)
 [![codecov](https://codecov.io/gh/nathanwhy/buzz/branch/master/graph/badge.svg)](https://codecov.io/gh/nathanwhy/buzz)
+![](https://img.shields.io/badge/language-Swift_5-orange.svg)
 
 Command-line program to download files
 
