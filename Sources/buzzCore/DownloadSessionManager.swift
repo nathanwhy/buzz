@@ -177,7 +177,13 @@ class DownloadSessionManager : NSObject, URLSessionDataDelegate {
     func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
         let dataLength = Int64((data as NSData).length)
         progress.completedUnitCount += dataLength
-        _ = data.withUnsafeBytes { outputStream?.write($0, maxLength: data.count) }
+        _ = data.withUnsafeBytes { (ptr) -> UInt8 in
+            guard let bytes = ptr.baseAddress?.assumingMemoryBound(to: UInt8.self) else {
+                return 0
+            }
+            outputStream?.write(bytes, maxLength: data.count)
+            return bytes.pointee
+        }
         showDownloadInfo()
     }
 
