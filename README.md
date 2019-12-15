@@ -6,12 +6,11 @@
 
 Command-line program to download files
 
-- [x] resume a download
-- [x] cookie support
-- [x] customize header
-- [ ] recursive download
-- [ ] output file
-- [ ] FTP support
+- [x] Resume a download
+- [x] Cookie support
+- [x] Customize header
+- [ ] Recursive download
+- [ ] Output file
 - [ ] Proxy
 
 
